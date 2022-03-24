@@ -1,21 +1,18 @@
 <?php
 namespace Code;
 
-class Euler
+class ProjectEuler
 {
-    public function eulerThree($largest_prime_factor)
+    public function eulerThree($number)
     {
-        $factor = 2;
-
-        while($factor * $factor < $largest_prime_factor)
-        {
-            while($largest_prime_factor % $factor)
-            {
-                $largest_prime_factor = $largest_prime_factor / $factor;
+        $prime = 2;
+        while ($prime * $prime < $number) {
+            while ($number % $prime === 0) {
+                $number /= $prime;
             }
-            $factor = $factor + 1;
+            $prime ++;
         }
-        return $largest_prime_factor;
+        return $number;
     }
 
     public function eulerTwo($max_value)
@@ -36,7 +33,7 @@ class Euler
         return $sum;
     }
 
-    public function eulerONe($limit)
+    public function eulerOne($limit)
     {
         $result = 0;
         $number = 1;
@@ -54,3 +51,4 @@ class Euler
         return $result;
     }
 }
+// echo ProjectEuler::eulerThree(6);
