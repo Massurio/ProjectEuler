@@ -1,10 +1,11 @@
 <?php
 
-//namespace OneTest;
+namespace OneTest;
 
 use Code\ProjectEuler;
+use PHPUnit\Framework\TestCase;
 
-class OneTest extends PHPUnit\Framework\TestCase
+class OneTest extends TestCase
 {
     public function testFour()
     {
@@ -32,12 +33,5 @@ class OneTest extends PHPUnit\Framework\TestCase
         $euler = new ProjectEuler();
         $out = $euler->eulerOne(1000);
         $this->assertSame(233168, $out);
-    }
-
-    public function testEuler()
-    {
-        $euler = new ProjectEuler();
-        $out = $euler->eulerOne(10);
-        $this->assertSame(23, $out);
     }
 }
