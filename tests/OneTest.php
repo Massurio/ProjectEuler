@@ -9,7 +9,7 @@ class OneTest extends PHPUnit\Framework\TestCase
         $euler = new Euler();
         $out = $euler->eulerThree(600851475143);
 
-        $this->assertSame(10, $out);        
+        $this->assertSame(0.2606286166780229, $out);        
     }
 
     public function testTwo()
