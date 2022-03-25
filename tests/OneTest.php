@@ -7,6 +7,20 @@ use PHPUnit\Framework\TestCase;
 
 class OneTest extends TestCase
 {
+    public function testFiveResult()
+    {
+        $euler = new ProjectEuler();
+        $out = $euler->eulerFive(20);
+        $this->assertSame(232792560, $out);
+    }
+
+    public function testFive()
+    {
+        $euler = new ProjectEuler();
+        $out = $euler->eulerFive(10);
+        $this->assertSame(2520, $out);
+    }
+
     public function testFour()
     {
         $euler = new ProjectEuler();

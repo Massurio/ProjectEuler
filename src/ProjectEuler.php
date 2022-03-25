@@ -2,8 +2,30 @@
 
 namespace Code;
 
+use LDAP\Result;
+
 class ProjectEuler
 {
+    public function eulerFive($input)
+    {
+        $sum = 1;
+        $off = false;
+        while (!$off) {
+            $count = 0;
+            for ($x = 1; $x <= $input; $x++) {
+                if ($sum % $x != 0) {
+                    $count += 1;
+                    break;
+                }
+            }
+            if ($count == 0) {
+                return $sum;
+                $off = true;
+            }
+            $sum++;
+        }
+    }
+
     public function eulerFour()
     {
         $palindrome = 0;
@@ -19,7 +41,7 @@ class ProjectEuler
         }
         return $palindrome;
     }
-    
+
     public function eulerThree($number)
     {
         $prime = 2;
