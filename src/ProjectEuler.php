@@ -4,6 +4,18 @@ namespace Code;
 
 class ProjectEuler
 {
+    public function eulerSeven($limit)
+    {
+        $result = 0 ;
+        for ($i = 0; $i < $limit; $i++) {
+            if ($i % 2 === 0) {
+                $result += $i;
+            }
+        }
+        return $result;
+
+    }
+
     public function eulerSix($number)
     {
         $sumOfSquares = 0;
